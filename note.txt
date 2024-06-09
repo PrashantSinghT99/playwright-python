@@ -1,3 +1,16 @@
+ASYNC AND SYNC scripts
+
+PYTEST and ini parameters
+
+#--headed
+#--baseurl https://www.saucedemo.com
+#--browser
+#--browser-channel
+#--tracing on
+#--tracing retain-on-failure
+#https://trace.playwright.dev/
+# playwright show-trace test-results\pytest-test-demo-py-test-saucelab-chromium\trace.zip
+
 CODEGEN AND INSPECTOR
 
 To record and create scripts npx playwright codegen https://www.saucedemo.com/ 
