@@ -10,9 +10,9 @@ async def main():
     
     await page.set_viewport_size({"width":1800,"height":1200})
     await page.goto("https://demoqa.com/checkbox")
-
+    # 'label[for="tree-node-home"]'
     await page.check("//*[@id='tree-node']/ol/li/span/label")
-    await page.screenshot(path="screenshots/checkboxes.png")
+    await page.screenshot(path="screenshots/checkbox.png")
 
     await page.is_checked("//*[@id='tree-node']/ol/li/span/label") is True
     await expect(page.locator("#result")).to_have_text("You have selected :homedesktopnotescommandsdocumentsworkspacereactangularveuofficepublicprivateclassifiedgeneraldownloadswordFileexcelFile")
