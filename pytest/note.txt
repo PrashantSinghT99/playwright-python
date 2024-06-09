@@ -1,0 +1,14 @@
+CODEGEN AND INSPECTOR
+
+To record and create scripts npx playwright codegen https://www.saucedemo.com/ 
+To run pytest codegen.py 
+npx playwright codegen --device="iPhone 13" https://www.saucedemo.com/
+npx playwright codegen --viewport-size=800,600 https://google.com
+npx playwright codegen --lang="it-IT" https://google.com 
+npx playwright codegen --color-scheme=dark https://www.saucedemo.com/
+For step over play use page.pause()
+
+DEBUG SELECTORS
+playwright.$('input')
+playwright.$$('input')
+playwright.inspect('input')
