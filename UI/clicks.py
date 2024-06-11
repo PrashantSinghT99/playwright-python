@@ -22,8 +22,7 @@ async def main():
         await button2.dblclick()
         await page.screenshot(path="screenshots/dblclick.png")
         await expect(page.locator('p[id="doubleClickMessage"]')).to_have_text("You have done a double click")
-        
-
+       
         await context.tracing.stop(path="logs/clicks.zip")
         await browser.close()
 
