@@ -25,3 +25,21 @@ DEBUG SELECTORS
 playwright.$('input')
 playwright.$$('input')
 playwright.inspect('input')
+
+
+
+HANDLING PAGES
+
+context.pages //list
+new_page.bring_to_front() //switch to new page list[1]
+
+COOKIES
+
+Get all the cookies from page.
+my_cookies = page.context.cookies()
+
+Clearing all the cookies.
+page.context.clear_cookies()
+
+Setting new cookies to page.
+page.context.add_cookies([new_cookies])
