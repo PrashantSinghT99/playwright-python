@@ -1,7 +1,7 @@
 import asyncio
 from playwright.async_api import async_playwright
 
-
+#to store dialog message
 text_alert=[]
 
 async def handle_dialog(dialog):
@@ -9,6 +9,7 @@ async def handle_dialog(dialog):
     text_alert.append(message)
     await dialog.accept("Prashant")
     
+#accept
 
 async def main():
    async with async_playwright() as p:
@@ -39,7 +40,7 @@ async def main():
         await browser.close()
 
 
-#dismiss alert and validate cancel message
+#dismiss
 
 async def cancel():
    async with async_playwright() as p:
@@ -68,7 +69,8 @@ async def cancel():
         await browser.close()
 
 
-#enter text in dialog box
+#enter text in dialog box via accept
+
 async def dialogEnterText():
    async with async_playwright() as p:
         browser = await p.chromium.launch(headless=False)
