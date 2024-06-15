@@ -1,3 +1,12 @@
+from playwright.sync_api import sync_playwright
+
+
+with sync_playwright() as p:
+    browser=p.chr
+
+
+
+
 # browser = p.chromium.launch(headless=False)
 #     context = browser.new_context()
 #     page = context.new_page()
@@ -14,3 +23,4 @@
 #     page.wait_for_timeout(3000)
 #     print(new_page.title())
 #     new_page.close()
+
