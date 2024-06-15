@@ -1,3 +1,26 @@
+from playwright.sync_api import sync_playwright
+
+
+with sync_playwright() as p:
+    browser=p.chromium.launch(headless=False)
+    context=browser.new_context()
+    page=context.new_page()
+    page.goto("https://www.redbus.in/")
+    
+    my_cookies=context.cookies()
+    
+    print("BEFORE",my_cookies)
+    
+    context.add_cookies([{'name': 'currency', 'value': 'USD', 'domain': 'www.redbus.in', 'path': '/', 'expires': 1718514734.138288, 'httpOnly': False, 'secure': False, 'sameSite': 'Lax'}])
+    
+    print("AFTER",my_cookies)
+    
+    context.clear_cookies()
+    
+    print("cookies are cleared")
+    
+    browser.close()
+
 # Get all the cookies from page.
 # my_cookies = page.context.cookies()
 
