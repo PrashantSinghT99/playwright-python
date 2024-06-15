@@ -11,7 +11,9 @@ with sync_playwright() as p:
     
     print("BEFORE",my_cookies)
     
-    context.add_cookies([{'name': 'currency', 'value': 'USD', 'domain': 'www.redbus.in', 'path': '/', 'expires': 1718514734.138288, 'httpOnly': False, 'secure': False, 'sameSite': 'Lax'}])
+    new_cookies={'name': 'currency', 'value': 'USD', 'domain': 'www.redbus.in', 'path': '/', 'expires': 1718514734.138288, 'httpOnly': False, 'secure': False, 'sameSite': 'Lax'}
+    
+    context.add_cookies([new_cookies])
     
     print("AFTER",my_cookies)
     
