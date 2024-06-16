@@ -10,6 +10,12 @@ PYTEST and ini parameters
 #--tracing retain-on-failure
 #https://trace.playwright.dev/
 # playwright show-trace test-results\pytest-test-demo-py-test-saucelab-chromium\trace.zip
+--maxfail=1
+--exitfirst
+
+test.py::test_function to return selective testcase
+
+-k filter or run as per need for eg: -k one  |   -k "one and not accum"
 
 CODEGEN AND INSPECTOR
 
@@ -49,3 +55,24 @@ page.context.add_cookies([new_cookies])
 #pytest fixtures
 module runs before all testcase
 function runs for every testcase
+
+
+MARKS 
+
+https://docs.pytest.org/en/stable/how-to/mark.html
+for user defined register in pytest.ini
+
+
+PLUGINS
+
+CODE COVERAGE
+
+--cov=unit-tests 
+--cov=branch
+--cov-report html
+
+RUN IN PARALLEL
+
+pytest-xdist  
+
+-n 3
