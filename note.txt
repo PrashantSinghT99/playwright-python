@@ -43,3 +43,9 @@ page.context.clear_cookies()
 
 Setting new cookies to page.
 page.context.add_cookies([new_cookies])
+
+
+
+#pytest fixtures
+module runs before all testcase
+function runs for every testcase

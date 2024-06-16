@@ -16,6 +16,7 @@ async def main():
         # await page.locator('select#cars').selectOption('volvo')
         # await page.locator('select#cars').selectOption('saab')
         # await page.locator('select#cars').selectOption('audi')
+        # await page.locator('select#cars').selectOption(label='audi')
         await page.select_option('select#cars',['volvo','saab','audi'])
         await page.screenshot(path='screenshots/dropdown.png')
         

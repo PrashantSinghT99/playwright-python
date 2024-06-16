@@ -13,6 +13,9 @@ async def main():
         
         #actions
         await page.check("#yesRadio",force=True)
+        
+        assert await page.locator("#yesRadio").is_checked()
+       
         await page.screenshot(path='screenshots/radio.png')
         
         #assertions
