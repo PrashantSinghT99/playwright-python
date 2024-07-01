@@ -12,6 +12,7 @@ PYTEST and ini parameters
 # playwright show-trace test-results\pytest-test-demo-py-test-saucelab-chromium\trace.zip
 --maxfail=1
 --exitfirst
+--html=Reports/report.html
 
 test.py::test_function to return selective testcase
 
@@ -76,3 +77,18 @@ RUN IN PARALLEL
 pytest-xdist  
 
 -n 3
+
+fixtures
+
+testcase expected to fail pytest.mark.xfail
+
+screenshot
+
+
+--screenshot=on
+--screenshot=only-on-failure
+
+
+PARALLEL EXECUTION
+
+-n 2

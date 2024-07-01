@@ -21,7 +21,9 @@ with sync_playwright() as p:
     
     print("cookies are cleared")
     
+    context.close()
     browser.close()
+    
 
 # Get all the cookies from page.
 # my_cookies = page.context.cookies()

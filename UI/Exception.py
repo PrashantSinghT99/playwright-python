@@ -22,4 +22,5 @@ with sync_playwright() as p:
         print(str(e))
     finally:
         page.close()
+        context.close()
         browser.close()

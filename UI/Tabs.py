@@ -19,8 +19,8 @@ with sync_playwright() as p:
     print(page.title())
     
     newpage=total_pages[1]
-    newpage.bring_to_front()
     # switch to new Tabs
+    newpage.bring_to_front()
     page.wait_for_timeout(3000)
     
     print(newpage.title())

@@ -1,7 +1,5 @@
 from playwright.sync_api import sync_playwright
 
-
-
 heading=[]
 
 with sync_playwright() as p:

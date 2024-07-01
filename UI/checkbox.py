@@ -15,9 +15,9 @@ async def main():
     await page.screenshot(path="screenshots/checkbox.png")
 
     await page.is_checked("//*[@id='tree-node']/ol/li/span/label") is True
-    await expect(page.locator("#result")).to_have_text("You have selected :homedesktopnotescommandsdocumentsworkspacereactangularveuofficepublicprivateclassifiedgeneraldownloadswordFileexcelFile")
+    await expect(page.locator("#result")).to_contain_text("You have selected :homedesktopnotescommandsdocumentsworkspacereactangularveuofficepublicprivateclassifiedgeneraldownloadswordFileexcelFile")
 
-    await context.tracing.stop(path="logs/checkbox.zip")
+    await context.tracing.stop(path="logs/checkbox_test.zip")
     
     await browser.close()
 

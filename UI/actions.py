@@ -1,11 +1,11 @@
 from playwright.sync_api import sync_playwright
 
 
-
 def handleDialog(dialog):
         message=dialog.message
         print(message)
         dialog.accept()
+       
         
 with sync_playwright() as p:
         browser=p.chromium.launch(headless=False)
@@ -23,8 +23,9 @@ with sync_playwright() as p:
         
         page.keyboard.press("Control+A",delay=100)
         
-        # double click
+        
         page.on('dialog',lambda dialog:print(dialog.message))
+        # double click
         page.dblclick('//button[text()="Double-Click Me To See Alert"]')
         
         #right click
